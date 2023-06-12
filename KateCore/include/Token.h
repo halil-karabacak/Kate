@@ -2,6 +2,10 @@
 
 #include <string>
 #include <vector>
+#include <File.h>
+#include <memory>
+
+class Kate::Utils::File;
 
 namespace Kate {
 	namespace Core {
@@ -18,9 +22,7 @@ namespace Kate {
 		class Token {
 
 		public:
-			Token() {
-
-			}
+			Token(std::string TextIn, std::shared_ptr<Kate::Utils::File> File, int FileIndex, int LineIndex, Kate::Core::TokenType TokenTypeIn);
 		};
 	}
 }

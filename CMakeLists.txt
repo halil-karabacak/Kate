@@ -8,3 +8,5 @@ add_subdirectory(Utils Utils)
 file(GLOB SOURCES src/main.cpp)
 
 add_executable(KateExec ${SOURCES})
+
+target_link_libraries(KateExec KateCore KateLLVM Utils)

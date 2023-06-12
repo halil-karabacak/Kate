@@ -14,5 +14,4 @@ file(GLOB SOURCES src/*cpp include/*.h)
 
 add_library(KateCore STATIC ${SOURCES})
 
-
 target_link_libraries(KateCore KateLLVM Utils)

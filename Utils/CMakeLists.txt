@@ -14,4 +14,5 @@ file(GLOB SOURCES src/*cpp include/*.h)
 
 add_library(Utils STATIC ${SOURCES})
 
+target_include_directories(Utils PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 target_link_libraries(KateCore KateLLVM Utils)

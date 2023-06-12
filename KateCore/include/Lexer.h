@@ -19,10 +19,10 @@ namespace Kate {
 		public:
 			std::vector<std::string> GetFileContents();
 			std::vector<Kate::Core::Token> Tokenize();
-			Kate::Core::CharType GetExpressionType(std::string Char);
+			Kate::Core::CharType GetExpressionType(std::shared_ptr<Kate::Utils::File> File, int index);
 
 		private:
-			std::string SourceFilePath = "../file.kate";
+			
 		};
 	}
 }
