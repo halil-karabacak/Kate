@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-project(KateLLVM LANGUAGES CXX)
+project(Utils LANGUAGES CXX)
 
 
 set(CMAKE_CXX_STANDARD 17)
@@ -12,7 +12,6 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include" "${CMAKE_CURRENT_SOURC
 
 file(GLOB SOURCES src/*cpp include/*.h)
 
-add_library(KateLLVM STATIC ${SOURCES})
-
+add_library(Utils STATIC ${SOURCES})
 
 target_link_libraries(KateCore KateLLVM Utils)
