@@ -20,5 +20,27 @@ namespace Kate {
 		{
 			return Kate::Core::CharType();
 		}
+
+		void ExpressionIdentifier::Init() {
+			mCharTypeMapping[' '] = CharType::WHITESPACE;
+			mCharTypeMapping['\n'] = CharType::NEWLINE;
+			mCharTypeMapping[';'] = CharType::END_LINE;
+
+			for (char c = 'a'; c <= 'z'; ++c)
+				mCharTypeMapping[c] = CharType::LETTER;
+
+			for (char c = 'A'; c <= 'Z'; ++c)
+				mCharTypeMapping[c] = CharType::LETTER;
+
+			mCharTypeMapping['_'] = CharType::LETTER;
+
+			for (char c = '0'; c <= '9'; ++c)
+				mCharTypeMapping[c] = CharType::DIGIT;
+
+			mCharTypeMapping['#'] = CharType::ONE_LINE_COMMENT;
+			mCharTypeMapping['"'] = CharType::STRING_QUOTE;
+
+			// Op-string types 
+		}
 	}
 }

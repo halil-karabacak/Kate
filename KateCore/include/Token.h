@@ -2,8 +2,8 @@
 
 #include <string>
 #include <vector>
-#include <File.h>
 #include <memory>
+#include <OperatorBase.h>
 
 class Kate::Utils::File;
 

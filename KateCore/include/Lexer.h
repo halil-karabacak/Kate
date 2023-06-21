@@ -10,6 +10,8 @@ namespace Kate {
 			DIGIT,
 			OPERATOR,
 			LETTER,
+			NEWLINE,
+			STRING_QUOTE,
 			ONE_LINE_COMMENT,
 			DEFAULT
 		};
@@ -22,7 +24,8 @@ namespace Kate {
 			Kate::Core::CharType GetExpressionType(std::shared_ptr<Kate::Utils::File> File, int index);
 
 		private:
-			
+			void Init();
+			std::unordered_map<char, CharType> mCharTypeMapping;
 		};
 	}
 }
